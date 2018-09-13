@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/hw1.css">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+
+    <title>World Economies</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">HTML portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#introduction">Introduction</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About the dataset</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#questions">Questions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section id="introduction" class="jumbotron" style="background-color: white;padding-bottom: 0rem;">
+        <h1 class="display-5">Learning about world's top economies through GDP <i class="fa fa-line-chart" aria-hidden="true"></i></h1>
+        <blockquote class="blockquote">
+            <p class="mb-0">Gross domestic (GDP) is a monetary measure of the market value of all the final goods and services produced in a period (quarterly or yearly) of time. The final goods may be from any sector namely: Agricultural, industrial or service sector.</p>
+            <br/>
+
+            <small class="text-muted">Agricultural (or primary) sector : </small>
+            <p class="mb-0">Agriculture (a term which encompasses farming) is the process of producing food, feed, fiber and other goods by the systematic raising of plants and animals. Agricultural output is a component of the GDP of a nation.</p>
+            <br/>
+
+            <small class="text-muted">Industrial (or secondary) sector : </small>
+            <p class="mb-0">Industry is the segment of economy concerned with production of goods (including fuels and fertilisers). Industrial output is a component of the GDP of a nation.</p>
+            <br/>
+
+            <small class="text-muted">Service (or tertiary) sector : </small>
+            <p class="mb-0">A service is the non-material equivalent of a good. Service provision is defined as an economic activity that does not result in ownership, and this is what differentiates it from providing physical goods. It is claimed[citation needed] to be a process that creates benefits by facilitating either a change in customers, a change in their physical possessions, or a change in their intangible assets. Service output is a component of the GDP of a nation. The service sector includes (but is not limited to) farm and factory related activities.</p>
+            <br/>
+            <footer class="blockquote-footer text-right"><cite title="Source Title">Wikipedia</cite></footer>
+        </blockquote>
+        <hr class="my-4">
+        <p>I have used the dataset called 'Countries of the world'. The link to this dataset can be found below:</p>
+        <a href="https://www.kaggle.com/fernandol/countries-of-the-world" target="_blank">https://www.kaggle.com/fernandol/countries-of-the-world</a>
+        <p style="font-size: 12px;">* Some of the columns in the dataset were not in a proper format and hence required modification. I have modified them using 'Calculated' property in Tableau.</p>
+        <hr class="my-4">
+    </section>
+
+    <div class="main-body">
+        <div class="container">
+
+            <div id="about">
+                <p class="lead"><i class="fa fa-columns" aria-hidden="true"></i> About the dataset:</p>
+                <div class="card table-card">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Column</th>
+                                <th scope="col">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td><i class="fa fa-font fa-fw" aria-hidden="true"></i>Country</td>
+                                <td>Name of the Country</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td><i class="fa fa-font fa-fw" aria-hidden="true"></i>Region</td>
+                                <td>Region which the country belongs to</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>Population</td>
+                                <td>Population of the country</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>Area</td>
+                                <td>Area of the country (in square miles)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>Pop. Density</td>
+                                <td>Population denstiy (per square miles)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>Net Migration</td>
+                                <td>Difference between number of immigrants and emigrants</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>GDP</td>
+                                <td>Gross domestic product (Dollars per capita)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>Literacy(%)</td>
+                                <td>Total number of literate persons in a given age group</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>Phones(per 1000)</td>
+                                <td>Number of phones per 1000 persons in a given country</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>Literacy(%)</td>
+                                <td>Total number of literate persons in a given age group - UNESCO</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">11</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>Arable(%)</td>
+                                <td>Percentage of area that is arable</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">12</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>Crops(%)</td>
+                                <td>Percentage of area that produces crops</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">13</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>Others(%)</td>
+                                <td>Percentage of area used for other purposes</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">14</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>Birthrate</td>
+                                <td>Number of live births per thousand of population per year</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">15</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>Deathrate</td>
+                                <td>Number of deaths per thousand of population per year</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">16</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>Agriculture</td>
+                                <td>Part of GDP that is contributed by agricultural produce</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">17</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>Industry</td>
+                                <td>Part of GDP that is contributed by industrial sector</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">18</th>
+                                <td><i class="fa fa-hashtag fa-fw" aria-hidden="true"></i>Service</td>
+                                <td>Part of GDP that is contributed by service sector</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <hr>
+            <div id="questions">
+                <section>
+                    <h5><small class="text-muted">Question-1</small></h5>
+                    <h1 class="display-5">What are the top 10 countries with highest GDP?</h1>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <figure class="figure">
+                                    <img src="./images/Countries%20with%20top%2010%20GDP.png" class="figure-img img-fluid rounded" alt="Image for countries with top 10 GDP">
+                                    <figcaption class="figure-caption text-center">Figure - 1</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <figure class="figure">
+                                    <img src="./images/Areas of the country with top 10 GDP.png" class="figure-img img-fluid rounded" alt="Image for countries with top 10 GDP">
+                                    <figcaption class="figure-caption text-center">Figure - 2</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card inference">
+                        <h5 class="card-header inference-header">Inferences</h5>
+                        <div class="card-body">
+                            <p class="card-text"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;&nbsp;Out of 227 countries of the dataset, <strong>Luxembourg</strong> has the highest GDP.
+                            </p>
+                            <p class="card-text"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;&nbsp;Though <strong>Bermuda</strong> is among the top 10 countries with highest GDP, it's population is very less (as can be seen from figure-2). On the other hand, it has a very small area of only 53 square miles. Hence, population and area are also important factors while analysing the economy of a country.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </section>
+
+                <hr class="hr-curved">
+                <section>
+                    <h5><small class="text-muted">Question-2</small></h5>
+                    <h1 class="display-5">What is the contribution of primary, secondary and tertiary sectors in the GDP?</h1>
+                    <div class="row">
+
+                        <div class="card">
+                            <figure class="figure">
+                                <img src="./images/Luxem.png" class="figure-img img-fluid rounded" alt="Image for countries with top 10 GDP">
+                                <figcaption class="figure-caption text-center">Figure - 3</figcaption>
+                            </figure>
+                        </div>
+
+
+                        <div class="card">
+                            <figure class="figure">
+                                <img src="./images/Norway.png" class="figure-img img-fluid rounded" alt="Image for countries with top 10 GDP">
+                                <figcaption class="figure-caption text-center">Figure - 4</figcaption>
+                            </figure>
+                        </div>
+                        <div class="card">
+                            <figure class="figure">
+                                <img src="./images/US.png" class="figure-img img-fluid rounded" alt="Image for countries with top 10 GDP">
+                                <figcaption class="figure-caption text-center">Figure - 5</figcaption>
+                            </figure>
+                        </div>
+                        <div class="card">
+                            <figure class="figure">
+                                <img src="./images/Cayman.png" class="figure-img img-fluid rounded" alt="Image for countries with top 10 GDP">
+                                <figcaption class="figure-caption text-center">Figure - 6</figcaption>
+                            </figure>
+                        </div>
+                        <div class="card">
+                            <figure class="figure">
+                                <img src="./images/Bermuda.png" class="figure-img img-fluid rounded" alt="Image for countries with top 10 GDP">
+                                <figcaption class="figure-caption text-center">Figure - 7</figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+                    <div class="card inference">
+                        <h5 class="card-header inference-header">Inferences</h5>
+                        <div class="card-body">
+                            <p class="card-text"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;&nbsp;Based on figures 3 - 7, it is quite interesting to note that, for the top 10 countries as displayed in figure 1, service sector is maximum contributor among all i.e. GDP is most affected by the service sector.
+                            </p>
+                            <p class="card-text"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;&nbsp;Though food is our basic need, the value of food produced in a country is the least, as can be seen through figures, i.e., it is the least contributor of GDP.
+                            </p>
+                            <p class="card-text"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;&nbsp;Out of all the 227 countries in the dataset, Norway is the only country with manufacturing sector at par with service sector.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </section>
+
+                <hr class="hr-curved">
+
+                <section>
+                    <h5><small class="text-muted">Question-3</small></h5>
+                    <h1 class="display-5">What does literacy rate v/s infant mortality rate for the countries with top 10 GDP imply?</h1>
+                    <div class="row">
+
+                        <div class="card card-Q3 table-card">
+                            <figure class="figure">
+                                <img src="./images/LiteracyVsInfant.png" class="figure-img img-fluid rounded" alt="Image for countries with top 10 GDP">
+                                <figcaption class="figure-caption text-center">Figure - 8</figcaption>
+                            </figure>
+                        </div>
+                        <div class="card card-Q3 table-card">
+                            <figure class="figure">
+                                <img src="./images/LiteracyVsInfantmortality2.png" class="figure-img img-fluid rounded" alt="Image for countries with top 10 GDP">
+
+                            </figure>
+                            <figcaption class="figure-caption text-center">Figure - 9</figcaption>
+                        </div>
+
+                        <div class="card inference">
+                            <h5 class="card-header inference-header">Inferences</h5>
+                            <div class="card-body">
+                                <p class="card-text"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;&nbsp;The countries follow a peculiar trend - the countries with highest GDP also have a very high literacy rate and in fact, <strong>Luxembourg </strong> has 100 percent literacy rate, at least according to the dataset.
+                                </p>
+                                <p class="card-text"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;&nbsp;Another intriguing fact is, the literacy rate has a direct impact on the infant mortality rate : <strong>Iceland </strong> has 99.9% literacy rate with only 14.43 infant mortality rate. On the other hand, as can be seen in figure 9, countries with low literacy rate has very high mortality rate.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </section>
+            </div>
+            <hr class="hr-curved">
+
+            <section id="conclusion">
+                <div class="card text-white bg-info">
+                    <div class="card-header"><i class="fa fa-info" aria-hidden="true"></i> Conclusion
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;&nbsp;Gross Domestic Product is a very broad term and is dependent on many factors.
+                        </p>
+                        <p class="card-text"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;&nbsp;Some of the important factors include Area, population, literacy rate, etc.
+                        </p>
+                        <p class="card-text"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;&nbsp;Literacy rate directly affects the morality rate and that in turn affects the GDP.
+                        </p>
+                        <p class="card-text"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;&nbsp;Though many countries have agriculture as their primary occupation, service and manufacturing sector contributes dominantly to the GDP.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <a id="back-to-top" href="#" class="btn btn-info btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><i class="fa fa-angle-up" aria-hidden="true"></i>
+</a>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.js"></script>
+<script src="./bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function() {
+            $('#back-to-top').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+
+        $('#back-to-top').tooltip('show');
+
+    });
+
+</script>
+
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="">
